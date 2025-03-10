@@ -9,7 +9,7 @@ int main() {
     std::cout << "Enter values (use -1 for backspace, -99 to stop): ";
     while (true) {
         std::cin >> num;
-        if (num == -99) break; 
+        if (num == -99) break;
         if (num == -1) {
             if (!s1.isEmpty()) s1.pop();
             if (!s2.isEmpty()) s2.pop();
