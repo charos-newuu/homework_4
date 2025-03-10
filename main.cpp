@@ -1,11 +1,12 @@
-#include <iostream>
 #include "MyStack1.h"
 #include "MyStack2.h"
+#include <iostream>
 
 int main() {
     MyStack1 s1;
     MyStack2 s2;
     int num;
+
     std::cout << "Enter values (use -1 for backspace, -99 to stop): ";
     while (true) {
         std::cin >> num;
@@ -23,5 +24,6 @@ int main() {
     s1.printStack();
     std::cout << "MyStack2: ";
     s2.printStack();
+
     return 0;
 }

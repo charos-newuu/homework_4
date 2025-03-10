@@ -3,10 +3,10 @@
 
 class MyLinkedList {
 public:
-    int val;
+    int value;
     MyLinkedList* next;
 
-    MyLinkedList(int v);
+    MyLinkedList(int val);
 };
 
 #endif

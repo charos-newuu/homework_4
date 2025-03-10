@@ -9,9 +9,9 @@ private:
 
 public:
     MyStack2();
-    void push(int val);
+    ~MyStack2();
+    void push(int value);
     void pop();
-    int top();
     bool isEmpty();
     void printStack();
 };

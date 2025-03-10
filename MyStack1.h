@@ -5,12 +5,11 @@
 
 class MyStack1 {
 private:
-    MyVector data;
+    MyVector vec;
 
 public:
-    void push(int val);
+    void push(int value);
     void pop();
-    int top();
     bool isEmpty();
     void printStack();
 };

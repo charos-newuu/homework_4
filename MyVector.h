@@ -8,10 +8,11 @@ private:
 
 public:
     MyVector();
-    void add(int val);
-    int get(int index);
-    void removeLast();
-    int getSize();
+    void push(int value);
+    void pop();
+    int top();
+    bool isEmpty();
+    void print();
 };
 
 #endif

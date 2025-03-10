@@ -17,11 +17,27 @@ void MyStack2::pop() {
     }
 }
 
-int MyStack2::top() {
+#include "MyStack2.h"
+#include <iostream>
+
+MyStack2::MyStack2() : head(nullptr) {}
+
+MyStack2::~MyStack2() {
+    while (head) pop();
+}
+
+void MyStack2::push(int value) {
+    MyLinkedList* newNode = new MyLinkedList(value);
+    newNode->next = head;
+    head = newNode;
+}
+
+void MyStack2::pop() {
     if (head) {
-        return head->val;
+        MyLinkedList* temp = head;
+        head = head->next;
+        delete temp;
     }
-    return -1;
 }
 
 bool MyStack2::isEmpty() {
@@ -29,10 +45,10 @@ bool MyStack2::isEmpty() {
 }
 
 void MyStack2::printStack() {
-    MyLinkedList* current = head;
-    while (current) {
-        std::cout << current->val << " ";
-        current = current->next;
+    MyLinkedList* temp = head;
+    while (temp) {
+        std::cout << temp->value << " ";
+        temp = temp->next;
     }
     std::cout << std::endl;
 }

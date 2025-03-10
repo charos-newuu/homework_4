@@ -1,26 +1,26 @@
 #include "MyVector.h"
+#include <iostream>
 
 MyVector::MyVector() : size(0) {}
 
-void MyVector::add(int val) {
-    if (size < 100) {
-        arr[size++] = val;
-    }
+void MyVector::push(int value) {
+    if (size < 100) arr[size++] = value;
 }
 
-int MyVector::get(int index) {
-    if (index >= 0 && index < size) {
-        return arr[index];
-    }
-    return -1;
+void MyVector::pop() {
+    if (size > 0) size--;
 }
 
-void MyVector::removeLast() {
-    if (size > 0) {
-        size--;
-    }
+int MyVector::top() {
+    return (size > 0) ? arr[size - 1] : -1;
 }
 
-int MyVector::getSize() {
-    return size;
+bool MyVector::isEmpty() {
+    return size == 0;
+}
+
+void MyVector::print() {
+    for (int i = size - 1; i >= 0; i--)
+        std::cout << arr[i] << " ";
+    std::cout << std::endl;
 }

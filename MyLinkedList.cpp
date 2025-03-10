@@ -1,3 +1,3 @@
 #include "MyLinkedList.h"
 
-MyLinkedList::MyLinkedList(int v) : val(v), next(nullptr) {}
+MyLinkedList::MyLinkedList(int val) : value(val), next(nullptr) {}
